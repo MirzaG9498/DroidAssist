@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "291102425950",
+    "project_id": "droidassist-c781d",
+    "storage_bucket": "droidassist-c781d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291102425950:android:0ecbf88b65181424a585cf",
+        "android_client_info": {
+          "package_name": "com.example.droidassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291102425950-2u7dr4avm7i4oaao7dgghqo61lrb8hon.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtito0_JVM4Y_dq6YNZXZJYStpnAmUKVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291102425950-2u7dr4avm7i4oaao7dgghqo61lrb8hon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

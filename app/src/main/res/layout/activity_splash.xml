@@ -28,7 +28,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="32sp"
-            android:text="Droid Assist" />
+            android:text="DROID ASSIST" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btnSignUp"
+                android:id="@+id/btnGoToSignUp"
                 android:layout_width="200dp"
                 android:layout_marginTop="100dp"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 android:text="Sign up" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnGoToLogin"
                 android:layout_width="200dp"
                 android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"

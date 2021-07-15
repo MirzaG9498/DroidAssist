@@ -10,8 +10,8 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val signupButton: Button = findViewById(R.id.btnSignUp)
-        val loginButton: Button = findViewById(R.id.btnLogin)
+        val signupButton: Button = findViewById(R.id.btnGoToSignUp)
+        val loginButton: Button = findViewById(R.id.btnGoToLogin)
 
         signupButton.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)

@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:hint="Name"
+            android:textColorHint="@color/secondary"
             app:boxBackgroundColor="@color/white"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -49,6 +50,7 @@
             android:layout_margin="20dp"
             android:hint="Email"
             app:boxBackgroundColor="@color/white"
+            android:textColorHint="@color/secondary"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -66,6 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:hint="USN"
+            android:textColorHint="@color/secondary"
             app:boxBackgroundColor="@color/white"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -82,6 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             app:boxBackgroundColor="@color/white"
+            android:textColorHint="@color/secondary"
             android:hint="Password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -100,6 +104,7 @@
             android:layout_margin="20dp"
             app:boxBackgroundColor="@color/white"
             android:hint="Confirm Password"
+            android:textColorHint="@color/secondary"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText

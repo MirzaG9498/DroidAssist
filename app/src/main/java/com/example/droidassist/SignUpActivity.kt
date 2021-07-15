@@ -27,6 +27,8 @@ class SignUpActivity : AppCompatActivity() {
         val passwordTextField: TextInputLayout = findViewById(R.id.etPassword)
         val confirmPasswordTextField: TextInputLayout = findViewById(R.id.etConfirmPassword)
 
+        val usnRegex = "[0-9]{1,2}[a-b]{2}[0-9]{1,2}[a-b]{2}[0-9]{3}"
+
         val signUpButton: Button = findViewById(R.id.btnRegister)
 
         signUpButton.setOnClickListener {
@@ -50,6 +52,8 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "Passwords Do Not Match", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+
+
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:textColor="@color/black"
+            android:textColor="@color/secondary"
             android:textStyle="bold"
             android:textSize="32sp"
             android:text="DROID ASSIST" />
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="@color/black"
+            android:textColor="@color/secondary"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:text="Online Education Made Easier" />

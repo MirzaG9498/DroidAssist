@@ -34,7 +34,6 @@ class HomeActivity : AppCompatActivity() {
             ?.addOnFailureListener { e ->
                 Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
             }
-
     }
 
     private fun getDepartment(usn: String): String {

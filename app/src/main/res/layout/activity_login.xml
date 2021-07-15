@@ -30,6 +30,7 @@
             android:layout_margin="20dp"
             app:boxBackgroundColor="@color/white"
             android:hint="Email"
+            android:textColorHint="@color/secondary"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -47,6 +48,7 @@
             android:layout_margin="20dp"
             app:boxBackgroundColor="@color/white"
             android:hint="Password"
+            android:textColorHint="@color/secondary"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText

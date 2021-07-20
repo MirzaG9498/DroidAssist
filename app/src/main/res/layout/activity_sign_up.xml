@@ -19,16 +19,19 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="32sp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/white"
-            android:text="Register"/>
+            android:text="Student Register" />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="Name"
             android:textColorHint="@color/secondary"
             app:boxBackgroundColor="@color/white"
@@ -37,8 +40,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                />
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,7 +49,10 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="Email"
             app:boxBackgroundColor="@color/white"
             android:textColorHint="@color/secondary"
@@ -56,8 +61,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                />
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,7 +70,10 @@
             android:id="@+id/etUSN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="USN"
             android:textColorHint="@color/secondary"
             app:boxBackgroundColor="@color/white"
@@ -83,7 +90,10 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             app:boxBackgroundColor="@color/white"
             android:textColorHint="@color/secondary"
             android:hint="Password"
@@ -92,8 +102,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,7 +110,10 @@
             android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             app:boxBackgroundColor="@color/white"
             android:hint="Confirm Password"
             android:textColorHint="@color/secondary"
@@ -110,10 +122,72 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinnerBranch"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:entries="@array/student_branch" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinnerSemester"
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/student_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinnerSection"
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/student_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
 
 
         <Button
@@ -124,7 +198,7 @@
             android:layout_margin="20dp"
             android:backgroundTint="@color/secondary"
             android:padding="20dp"
-            android:text="Sign Up"/>
+            android:text="Sign Up" />
 
 
     </LinearLayout>

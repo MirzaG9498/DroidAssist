@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Droid Assist</string>
+    <string-array name="student_branch">
+        <item>Select Branch</item>
+        <item>Civil Engineering</item>
+        <item>Computer Science</item>
+        <item>Electronics &amp; Communication</item>
+        <item>Electrical Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Telecommunication Engineering</item>
+    </string-array>
+
+    <string-array name="student_semester">
+        <item>Semester</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+    <string-array name="student_section">
+        <item>Section</item>
+        <item>A</item>
+        <item>B</item>
+    </string-array>
 </resources>

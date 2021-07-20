@@ -19,15 +19,25 @@ class LoginActivity : AppCompatActivity() {
 
         val emailTextField: TextInputLayout = findViewById(R.id.etLoginEmail)
         val passwordTextField: TextInputLayout = findViewById(R.id.etLoginPassword)
+        val usnTextField: TextInputLayout = findViewById(R.id.etLoginUsn)
 
         val loginButton: Button = findViewById(R.id.btnLogin)
+
+        val usnRegex = Regex("^[0-9]{1,2}[a-z]{2}[0-9]{2}[a-z]{2}[0-9]{3}\$", RegexOption.IGNORE_CASE)
+
 
         loginButton.setOnClickListener {
             val email = emailTextField.editText?.text.toString()
             val password = passwordTextField.editText?.text.toString()
+            val usn = usnTextField.editText?.text.toString().uppercase()
 
-            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(usn)) {
                 Toast.makeText(this, "Credentials Cannot be empty", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            if(!usnRegex.matches(usn)){
+                Toast.makeText(this, "Please Enter Valid USN", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
 
@@ -36,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Logged In Successfully", Toast.LENGTH_LONG).show()
                         val intent = Intent(this,HomeActivity::class.java)
+                        intent.putExtra("userUsn",usn)
                         startActivity(intent)
                     } else {
                         Toast.makeText(

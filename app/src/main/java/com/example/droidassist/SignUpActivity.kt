@@ -4,8 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.Toast
+import android.widget.*
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -26,17 +25,33 @@ class SignUpActivity : AppCompatActivity() {
         val usnTextField: TextInputLayout = findViewById(R.id.etUSN)
         val passwordTextField: TextInputLayout = findViewById(R.id.etPassword)
         val confirmPasswordTextField: TextInputLayout = findViewById(R.id.etConfirmPassword)
+        val spinnerBranch: Spinner = findViewById(R.id.spinnerBranch)
+        val spinnerSemester: Spinner = findViewById(R.id.spinnerSemester)
+        val spinnerSection: Spinner = findViewById(R.id.spinnerSection)
 
-        val usnRegex = "[0-9]{1,2}[a-b]{2}[0-9]{1,2}[a-b]{2}[0-9]{3}"
+        val usnRegex = Regex("^[0-9]{1,2}[a-z]{2}[0-9]{2}[a-z]{2}[0-9]{3}\$", RegexOption.IGNORE_CASE)
 
         val signUpButton: Button = findViewById(R.id.btnRegister)
 
         signUpButton.setOnClickListener {
             val username = usernameTextField.editText?.text.toString()
             val email = emailTextField.editText?.text.toString()
-            val usn = usnTextField.editText?.text.toString()
+            val usn = usnTextField.editText?.text.toString().uppercase()
             val password = passwordTextField.editText?.text.toString()
             val confirmPassword = confirmPasswordTextField.editText?.text.toString()
+            val branch = spinnerBranch.selectedItem.toString()
+            val semester = spinnerSemester.selectedItem.toString()
+            val section = spinnerSection.selectedItem.toString()
+
+
+            println(username)
+            println(email)
+            println(usn)
+            println(password)
+            println(confirmPassword)
+            println(branch)
+            println(semester)
+            println(section)
 
             if (TextUtils.isEmpty(username) ||
                 TextUtils.isEmpty(email) ||
@@ -53,12 +68,31 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if(!usnRegex.matches(usn)){
+                Toast.makeText(this, "Please Enter Valid USN", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            if(branch == "Select Branch"){
+                Toast.makeText(this, "Please Select Valid Branch", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            if(semester == "Select Semester"){
+                Toast.makeText(this, "Please Select Valid Semester", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            if(section == "Select Section"){
+                Toast.makeText(this, "Please Select Valid Section", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
 
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val docRef = db?.collection("users")?.document(email)
+                        val docRef = db?.collection("users")?.document(usn)
                         println("docRef $docRef")
                         docRef?.get()?.addOnSuccessListener { documentSnapshot ->
                             val user: User? = documentSnapshot.toObject(User::class.java)
@@ -67,9 +101,9 @@ class SignUpActivity : AppCompatActivity() {
                                 Toast.makeText(this, "User Already Exists", Toast.LENGTH_LONG)
                                     .show()
                             } else {
-                                val newUser = User(username, email, usn)
+                                val newUser = User(usn, username, email, branch, semester, section)
                                 println("NewUser $newUser")
-                                db?.collection("users")?.document(email)?.set(newUser)
+                                db?.collection("users")?.document(usn)?.set(newUser)
                                 Toast.makeText(
                                     this,
                                     "User Registered Successfully",
@@ -90,4 +124,5 @@ class SignUpActivity : AppCompatActivity() {
         }
 
     }
+
 }

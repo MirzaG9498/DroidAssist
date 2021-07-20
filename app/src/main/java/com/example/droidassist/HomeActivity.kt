@@ -19,37 +19,22 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val userEmail: String = auth.currentUser?.email!!
+        val usnIntent: String? = intent.getStringExtra("userUsn")
         val username: TextView = findViewById(R.id.tvHomeUsername)
         val department: TextView = findViewById(R.id.tvHomeUserDepartment)
         val usn: TextView = findViewById(R.id.tvHomeUserUsn)
 
-        val userDocRef = database?.collection("users")?.document(userEmail)
+        val userDocRef = database?.collection("users")?.document(usnIntent!!)
         userDocRef?.get()
             ?.addOnSuccessListener { userDocSnapshot ->
                 val user: User? = userDocSnapshot.toObject(User::class.java)
-                username.text = user?.username
+                username.text = user?.username?.capitalize()
                 usn.text = user?.usn
-                department.text = getDepartment(usn.text.toString())
+                department.text = user?.branch
             }
             ?.addOnFailureListener { e ->
                 Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
             }
     }
 
-    private fun getDepartment(usn: String): String {
-        var department: String = ""
-        if (usn.contains("CS", ignoreCase = true)) {
-            department = "Computer Science"
-        }
-        if (usn.contains("EC", ignoreCase = true)) {
-            department = "Electronics and Communication"
-        }
-        if (usn.contains("ME", ignoreCase = true)) {
-            department = "Mechanical Engineering"
-        }
-        if (usn.contains("CV", ignoreCase = true)) {
-            department = "Civil Engineering"
-        }
-        return department
-    }
 }

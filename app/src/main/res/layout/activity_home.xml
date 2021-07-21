@@ -81,8 +81,8 @@
         android:layout_marginEnd="20dp"
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/timetable_icon"
@@ -90,8 +90,9 @@
         android:text="View Time Table"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/ongoingClassText"
@@ -134,7 +135,7 @@
             android:layout_height="wrap_content"
             android:text="Class Name"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/ongoingClassLink"
@@ -149,6 +150,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -163,7 +165,8 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -180,14 +183,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:text="Home"/>
         </LinearLayout>
 
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -204,13 +208,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:text="Resources"/>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -227,14 +232,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:text="Attendance"/>
         </LinearLayout>
 
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -252,7 +258,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:text="IA"/>
         </LinearLayout>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".LoginActivity">
+    tools:context=".FacultyLoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,11 +20,11 @@
             android:textSize="32sp"
             android:layout_marginBottom="20dp"
             android:textColor="@color/white"
-            android:text="Student Login"/>
+            android:text="Faculty Login"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etLoginEmail"
+            android:id="@+id/etFacultyLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -41,26 +41,9 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etLoginUsn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            app:boxBackgroundColor="@color/white"
-            android:hint="USN"
-            android:textColorHint="@color/secondary"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etLoginPassword"
+            android:id="@+id/etFacultyLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -79,7 +62,7 @@
 
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnFacultyLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -89,5 +72,6 @@
             android:text="Log In"/>
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

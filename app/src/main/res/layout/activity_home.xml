@@ -193,6 +193,7 @@
 
 
         <LinearLayout
+            android:id="@+id/goToResourceLinearLayout"
             android:orientation="vertical"
             android:layout_marginStart="10dp"
             android:paddingTop="10dp"
@@ -247,6 +248,7 @@
 
 
         <LinearLayout
+            android:id="@+id/goToIALinearLayout"
             android:orientation="vertical"
             android:layout_marginStart="10dp"
             android:paddingTop="10dp"

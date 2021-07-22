@@ -44,6 +44,13 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, AttendanceActivity::class.java)
             startActivity(intent)
         }
+
+        val goToResources: LinearLayout = findViewById(R.id.goToResourceLinearLayout)
+        goToResources.setOnClickListener {
+            val intent = Intent(this, ResourcesActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

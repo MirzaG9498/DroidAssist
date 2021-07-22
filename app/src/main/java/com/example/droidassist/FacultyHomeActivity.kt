@@ -33,9 +33,5 @@ class FacultyHomeActivity : AppCompatActivity() {
             ?.addOnFailureListener { e ->
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
             }
-
-
     }
-
-
 }

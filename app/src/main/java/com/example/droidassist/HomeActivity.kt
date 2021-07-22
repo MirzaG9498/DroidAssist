@@ -1,7 +1,10 @@
 package com.example.droidassist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -35,5 +38,12 @@ class HomeActivity : AppCompatActivity() {
             ?.addOnFailureListener { e ->
                 Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
             }
+
+        val goToAttendance: LinearLayout = findViewById(R.id.goToAttendanceLinearLayout)
+        goToAttendance.setOnClickListener {
+            val intent = Intent(this, AttendanceActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 }

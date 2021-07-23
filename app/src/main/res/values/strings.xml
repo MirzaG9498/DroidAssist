@@ -28,4 +28,14 @@
         <item>A</item>
         <item>B</item>
     </string-array>
+
+    <string-array name="time_table_day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
 </resources>

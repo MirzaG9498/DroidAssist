@@ -51,6 +51,13 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val goToTimeTable: TextView = findViewById(R.id.goToTimetable)
+        goToTimeTable.setOnClickListener {
+            val intent = Intent(this, TimeTableActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
 }

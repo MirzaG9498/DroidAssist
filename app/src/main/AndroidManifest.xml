@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DroidAssist">
-        <activity android:name=".TimeTableActivity"></activity>
+        <activity android:name=".InternalAssessmentActivity"></activity>
+        <activity android:name=".TimeTableActivity" />
         <activity android:name=".ResourcesActivity" />
         <activity android:name=".AttendanceActivity" />
         <activity android:name=".FacultyHomeActivity" />

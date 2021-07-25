@@ -38,4 +38,10 @@
         <item>Saturday</item>
     </string-array>
 
+    <string-array name="internals">
+        <item>IA 1</item>
+        <item>IA 2</item>
+        <item>IA 3</item>
+    </string-array>
+
 </resources>

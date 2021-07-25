@@ -59,6 +59,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val goToIA: LinearLayout = findViewById(R.id.goToIALinearLayout)
+        goToIA.setOnClickListener {
+            val intent = Intent(this, InternalAssessmentActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -17,6 +17,7 @@ import models.User
 class HomeActivity : AppCompatActivity() {
     private var auth: FirebaseAuth = FirebaseAuth.getInstance()
     private var database: FirebaseFirestore? = Firebase.firestore
+    private var user: User? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -30,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
         val userDocRef = database?.collection("users")?.document(usnIntent!!)
         userDocRef?.get()
             ?.addOnSuccessListener { userDocSnapshot ->
-                val user: User? = userDocSnapshot.toObject(User::class.java)
+                user = userDocSnapshot.toObject(User::class.java)
                 username.text = user?.username?.capitalize()
                 usn.text = user?.usn
                 department.text = user?.branch
@@ -54,6 +55,7 @@ class HomeActivity : AppCompatActivity() {
         val goToTimeTable: TextView = findViewById(R.id.goToTimetable)
         goToTimeTable.setOnClickListener {
             val intent = Intent(this, TimeTableActivity::class.java)
+            intent.putExtra("usn", user?.usn)
             startActivity(intent)
         }
 

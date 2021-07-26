@@ -43,12 +43,14 @@ class HomeActivity : AppCompatActivity() {
         val goToAttendance: LinearLayout = findViewById(R.id.goToAttendanceLinearLayout)
         goToAttendance.setOnClickListener {
             val intent = Intent(this, AttendanceActivity::class.java)
+            intent.putExtra("usn", user?.usn)
             startActivity(intent)
         }
 
         val goToResources: LinearLayout = findViewById(R.id.goToResourceLinearLayout)
         goToResources.setOnClickListener {
             val intent = Intent(this, ResourcesActivity::class.java)
+            intent.putExtra("usn", user?.usn)
             startActivity(intent)
         }
 
@@ -62,6 +64,7 @@ class HomeActivity : AppCompatActivity() {
         val goToIA: LinearLayout = findViewById(R.id.goToIALinearLayout)
         goToIA.setOnClickListener {
             val intent = Intent(this, InternalAssessmentActivity::class.java)
+            intent.putExtra("usn", user?.usn)
             startActivity(intent)
         }
 

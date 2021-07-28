@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.droidassist.R
 
-class InternalsAdapter(val context: Context, val internalScoreList: List<Internals>): RecyclerView.Adapter<InternalsAdapter.InternalsViewHolder>() {
+class InternalsAdapter(val context: Context, val internalScoreList: List<InternalAssessment>): RecyclerView.Adapter<InternalsAdapter.InternalsViewHolder>() {
 
     class InternalsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val iaSubjectMarks: TextView = itemView.findViewById(R.id.iaSubjectMarks)

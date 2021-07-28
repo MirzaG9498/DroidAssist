@@ -39,9 +39,9 @@
     </string-array>
 
     <string-array name="internals">
-        <item>IA 1</item>
-        <item>IA 2</item>
-        <item>IA 3</item>
+        <item>IA1</item>
+        <item>IA2</item>
+        <item>IA3</item>
     </string-array>
 
 </resources>

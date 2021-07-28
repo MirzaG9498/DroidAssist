@@ -33,7 +33,7 @@
         android:layout_height="wrap_content">
 
         <Spinner
-            android:id="@+id/iaSpinner"
+            android:id="@+id/spinnerInternalAssessment"
             android:padding="12dp"
             android:layout_width="match_parent"
             android:textAlignment="center"

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.droidassist.R
+import kotlin.math.roundToInt
 
 class AttendanceAdapter(private val context: Context, private val attendanceList: List<Attendance>): RecyclerView.Adapter<AttendanceAdapter.AttendanceViewHolder>() {
 
@@ -23,7 +24,8 @@ class AttendanceAdapter(private val context: Context, private val attendanceList
 
     override fun onBindViewHolder(holder: AttendanceViewHolder, position: Int) {
         val currentAttendanceItem = attendanceList[position]
-        holder.tvAttendancePercentage.text = currentAttendanceItem.percentage.toString() + "%"
+        val calculatePercentage = (currentAttendanceItem.attendedClasses.toDouble() / currentAttendanceItem.totalClasses.toDouble()) * 100
+        holder.tvAttendancePercentage.text = calculatePercentage.roundToInt().toString() + "%"
         holder.tvAttendanceSubjectCode.text = currentAttendanceItem.subjectCode
         holder.tvAttendedClassesCount.text = "${currentAttendanceItem.attendedClasses}/${currentAttendanceItem.totalClasses}"
     }

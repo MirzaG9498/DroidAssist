@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/secondary"
         android:layout_margin="10dp"
-        android:text="Subject Name"
+        android:text="Subject Code"
         android:textSize="24sp" />
 
     <TextView

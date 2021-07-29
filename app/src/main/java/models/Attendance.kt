@@ -1,8 +1,11 @@
 package models
 
 data class Attendance(
-    val percentage: Double = 0.0,
+    val branch: String = "",
+    val sem: String = "",
+    val sec: String = "",
+    val usn: String = "",
     val subjectCode: String = "",
-    val attendedClasses: Int = 0,
-    val totalClasses: Int = 0
+    val attendedClasses: String = "",
+    val totalClasses: String = ""
 )

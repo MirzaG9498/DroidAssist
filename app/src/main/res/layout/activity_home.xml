@@ -64,14 +64,37 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_gravity="center"
-            android:src="@drawable/user_profile"
-            android:contentDescription="User Image" />
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgHomeUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/user_profile"
+                android:contentDescription="User Image" />
+
+            <TextView
+                android:id="@+id/tvHomeLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/goToTimetable"

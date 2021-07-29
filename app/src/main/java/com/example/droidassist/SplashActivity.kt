@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
 
         val signupButton: Button = findViewById(R.id.btnGoToSignUp)
         val loginButton: Button = findViewById(R.id.btnGoToLogin)
-        val facultyLoginButton: Button = findViewById(R.id.btnGoToFacultyLogin)
+//        val facultyLoginButton: Button = findViewById(R.id.btnGoToFacultyLogin)
 
         signupButton.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -24,10 +24,10 @@ class SplashActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        facultyLoginButton.setOnClickListener {
-            val intent = Intent(this, FacultyLoginActivity::class.java)
-            startActivity(intent)
-        }
+//        facultyLoginButton.setOnClickListener {
+//            val intent = Intent(this, FacultyLoginActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
 }

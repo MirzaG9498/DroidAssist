@@ -13,11 +13,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="20dp"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/navbar_rect"
         android:text="Timetable"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textColor="@color/white"/>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -25,6 +26,12 @@ class LoginActivity : AppCompatActivity() {
         val emailTextField: TextInputLayout = findViewById(R.id.etLoginEmail)
         val passwordTextField: TextInputLayout = findViewById(R.id.etLoginPassword)
         val usnTextField: TextInputLayout = findViewById(R.id.etLoginUsn)
+        val goToRegister: TextView = findViewById(R.id.goToRegister)
+
+        goToRegister.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
 
         val loginButton: Button = findViewById(R.id.btnLogin)
 

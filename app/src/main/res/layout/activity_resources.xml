@@ -16,7 +16,7 @@
         android:text="Resources"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:padding="10dp"
+        android:padding="5dp"
         android:textColor="@color/white"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"

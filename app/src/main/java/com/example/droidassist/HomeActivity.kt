@@ -12,6 +12,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import models.TimeTableDay
 import models.User
+import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -30,6 +31,9 @@ class HomeActivity : AppCompatActivity() {
         val department: TextView = findViewById(R.id.tvHomeUserDepartment)
         val usn: TextView = findViewById(R.id.tvHomeUserUsn)
         val onGoingClassCode: TextView = findViewById(R.id.ongoingClassName)
+        val logout: TextView = findViewById(R.id.tvHomeLogout)
+
+
         val day = getCurrentDay()
         val timeFormat = SimpleDateFormat("hh:mm")
         val currentTime = timeFormat.format(Date())
@@ -37,6 +41,9 @@ class HomeActivity : AppCompatActivity() {
         val userDocRef = database?.collection("users")?.document(usnIntent!!)
         val timetableCollectionRef = database?.collection("timetable")
         var currentSubjects = ""
+
+
+
         userDocRef?.get()
             ?.addOnSuccessListener { userDocSnapshot ->
                 user = userDocSnapshot.toObject(User::class.java)
@@ -97,6 +104,13 @@ class HomeActivity : AppCompatActivity() {
         goToIA.setOnClickListener {
             val intent = Intent(this, InternalAssessmentActivity::class.java)
             intent.putExtra("usn", user?.usn)
+            startActivity(intent)
+        }
+
+        logout.setOnClickListener {
+            auth.signOut()
+            Toast.makeText(this, "Logged Out Successfully", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 

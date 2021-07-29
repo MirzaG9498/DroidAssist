@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/navbar_rect"
         android:textColor="@color/white"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_margin="20dp"
         android:text="Attendance"
         android:textStyle="bold"

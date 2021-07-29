@@ -45,14 +45,17 @@ class TimeTableActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
                 timetableCollectionRef.whereEqualTo("branch", user?.branch)
                     .whereEqualTo("sem", user?.sem).whereEqualTo("sec", user?.sec)
                     .whereEqualTo("day", day).get().addOnSuccessListener { result ->
-                    timeTableDayList = result.toObjects(TimeTableDay::class.java)
-                    recyclerView.adapter = TimeTableDayAdapter(this, timeTableDayList)
-                    recyclerView.layoutManager = LinearLayoutManager(this)
+                        timeTableDayList = result.toObjects(TimeTableDay::class.java)
+                        timeTableDayList.sortBy { timeTableDay ->
+                            timeTableDay.subjectCode
+                        }
+                        recyclerView.adapter = TimeTableDayAdapter(this, timeTableDayList)
+                        recyclerView.layoutManager = LinearLayoutManager(this)
 //                    recyclerView.adapter?.notifyDataSetChanged()
-                    for (timeTableDay in timeTableDayList) {
-                        println("TimetableDay ${timeTableDay}")
+                        for (timeTableDay in timeTableDayList) {
+                            println("TimetableDay ${timeTableDay}")
+                        }
                     }
-                }
             } else {
                 println("Error: $it")
             }

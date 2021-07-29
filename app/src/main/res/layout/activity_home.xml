@@ -107,7 +107,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:layout_marginStart="20dp"
-        android:text="Ongoing Class"
+        android:text="Classes Today"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -137,16 +137,6 @@
             android:text="Class Name"
             android:textColor="@color/white"
             android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/ongoingClassLink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Link: URL"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
 
     </LinearLayout>
 

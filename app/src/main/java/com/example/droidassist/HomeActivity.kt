@@ -65,7 +65,11 @@ class HomeActivity : AppCompatActivity() {
 
                             println(timeTableDay)
                         }
-                        onGoingClassCode.text = currentSubjects
+                        if(currentSubjects.length > 0){
+                            onGoingClassCode.text = currentSubjects
+                        } else {
+                            onGoingClassCode.text = "No Classes Today!"
+                        }
                     }
                     ?.addOnFailureListener {
                         println(it)
